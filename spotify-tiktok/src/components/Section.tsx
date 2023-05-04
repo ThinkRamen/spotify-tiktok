@@ -1,5 +1,6 @@
 import { motion, useInView } from 'framer-motion'
 import { useRef } from 'react'
+import CityNameFromLatLong from './CityName'
 
 function Section({ wordObj, observer }) {
 	const ref = useRef(null)
@@ -14,7 +15,10 @@ function Section({ wordObj, observer }) {
 				transition: 'all 1.5s'
 			}}
 		>
-			<h1 ref={ref}>{wordObj.word}</h1>
+			<div ref={ref}>
+				<h1>{wordObj.word}</h1>
+				<CityNameFromLatLong />
+			</div>
 		</motion.section>
 	)
 }
