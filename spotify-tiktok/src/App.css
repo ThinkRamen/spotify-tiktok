@@ -1,0 +1,25 @@
+html {
+	scroll-behavior: smooth;
+}
+#root {
+	margin: 0 auto;
+	text-align: center;
+}
+.container,
+section {
+	height: 100vh;
+	width: 100vw;
+}
+.container {
+	overflow: auto;
+	color: aquamarine;
+	scroll-snap-type: y mandatory;
+}
+
+section {
+	display: grid;
+	align-content: center;
+	place-items: center;
+	scroll-snap-align: start;
+	scroll-snap-stop: always;
+}
