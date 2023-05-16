@@ -1,6 +1,6 @@
 import axios from 'axios'
-import { useEffect, useState } from 'react'
-
+import { useInView } from 'framer-motion'
+import { useEffect, useRef, useState } from 'react'
 import './App.css'
 import Section from './components/Section'
 
@@ -24,6 +24,13 @@ function App() {
 
 		setWordObjs(wordObj)
 	}
+
+	const observer = new IntersectionObserver((entries) => {
+		entries.forEach((entry) => {
+			console.log(entry)
+			entry.target.classList.toggle('show', entry.isIntersecting)
+		})
+	})
 
 	return (
 		<div className='container'>
