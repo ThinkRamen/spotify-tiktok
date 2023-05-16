@@ -12,7 +12,7 @@ section {
 }
 .container {
 	overflow: auto;
-	color: aquamarine;
+	color: rgb(36, 154, 115);
 	scroll-snap-type: y mandatory;
 }
 
