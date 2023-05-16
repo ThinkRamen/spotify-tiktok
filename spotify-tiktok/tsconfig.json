@@ -11,6 +11,7 @@
 		"resolveJsonModule": true,
 		"isolatedModules": true,
 		"noEmit": true,
+		"noEmitOnError": false, //temp
 		"jsx": "react-jsx",
 
 		/* Linting */
