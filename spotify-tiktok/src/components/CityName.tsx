@@ -7,7 +7,6 @@ function CityNameFromLatLong() {
 	const [cityName, setCityName] = useState(null)
 
 	useEffect(() => {
-		// Get the user's current location using the Geolocation API
 		navigator.geolocation.getCurrentPosition(
 			(position) => {
 				setLat(position.coords.latitude)
@@ -19,7 +18,6 @@ function CityNameFromLatLong() {
 
 	useEffect(() => {
 		if (lat && long) {
-			// Use a reverse geocoding API to get the city name from the coordinates
 			axios
 				.get(
 					`https://api.bigdatacloud.net/data/reverse-geocode-client?latitude=${lat}&longitude=${long}&localityLanguage=en`
